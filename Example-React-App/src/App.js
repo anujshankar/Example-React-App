@@ -16,13 +16,7 @@ class App extends Component {
     console.log(this.props.params.comp)
     const param = this.props.params.comp
     let display
-    if (param === undefined) {
-      console.log(1)
-      display = (<div className='button'>
-        <button><Link to='A'>A</Link></button>
-        <button><Link to='B'>B</Link></button>
-      </div>)
-    } else if (param === 'A') {
+    if (param === 'A') {
       display = (<div>
         <button><Link to='/B'>Goto B</Link></button>
         <select onChange={this.update.bind(this)} value={this.state.tab}>
@@ -31,7 +25,7 @@ class App extends Component {
         </select>
         <div> This is A with {this.state.tab}</div>
       </div>)
-    } else if(param === 'B') {
+    } else if (param === 'B') {
       display = (<div>
         <button><Link to='/A'>Goto A</Link></button>
         <select onChange={this.update.bind(this)} value={this.state.tab}>
@@ -40,10 +34,9 @@ class App extends Component {
         </select>
         <div> This is B with {this.state.tab}</div>
       </div>)
-    } else{
+    } else {
       display = (<div>Error: 404</div>)
     }
-
     return (display)
   }
 }
