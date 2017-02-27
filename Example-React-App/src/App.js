@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import './App.css'
 class App extends Component {
   render() {
-    console.log(1)
+    console.log('app')
     return (
       <div>
         <div className='button'>
